@@ -42,6 +42,7 @@ section{
 .services .serv-content,
 .skills .skills-content,
 .project .project-content,
+
 .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
@@ -305,6 +306,7 @@ section .title::after{
     color:#fff;
     background: #111;
 }
+
 .services .title::before,
 .teams .title::before{
     background: #fff;
@@ -602,7 +604,12 @@ footer span a:hover{
         width: 350px;
     }
 }
-
+@media (max-width: 1104px) {
+    .project .project-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
 @media (max-width: 991px) {
     .max-width{
         padding: 0 50px;
@@ -662,6 +669,17 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
+    .project .project-content .column{
+        width: 100%;
+    }
+    .project .project-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .project .project-content .right{
+        flex: 100%;
+    }
     .services .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
@@ -698,7 +716,7 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 27px;
     }
-    .about .about-content .right .text,
+    .about .about-content .right .text,.project .project-content
     .skills .skills-content .left .text{
         font-size: 19px;
     }
