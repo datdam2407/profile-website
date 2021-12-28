@@ -71,3 +71,40 @@ $(document).ready(function(){
         }
     });
 });
+
+function sendEmail(params){
+    var tempParams = {
+        from_name: document.getElementById("fromName").value, 
+        to_name: document.getElementById("toName").value,
+        message: document.getElementById("msg").value,
+    };
+    emailjs.send('gmail_sevenn','template_84ack2x',tempParams)
+    .then(function(res){
+        console.log("success", res.status)
+        
+    })
+
+}
+document.querySelector('button').addEventListener('click', () =>{
+    nativeToast({
+        message: 'Thank you for sending!',
+        position: 'center',    
+        rounded: true,
+        timeout: 3000,
+        type: 'success',
+        icon: false,
+        closeOnClick: true,
+     
+      })
+})
+sendMessage.addEventListener('input', ()=>{
+    // var fromName = document.getElementById("fromName").value;
+    // var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if(fromName.value.length > 0 && toName.value.length > 0 && msg.value.length > 0)
+    {
+        btnMsg.removeAttribute('disabled')
+    }else{
+        btnMsg.setAttribute('disabled','disabled');
+
+    }
+})
