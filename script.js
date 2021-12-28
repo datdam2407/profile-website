@@ -85,7 +85,7 @@ function sendEmail(params){
     })
 
 }
-document.querySelector('button').addEventListener('click', () =>{
+document.querySelector('button#btnMsg').addEventListener('click', () =>{
     nativeToast({
         message: 'Thank you for sending!',
         position: 'center',    
@@ -94,7 +94,6 @@ document.querySelector('button').addEventListener('click', () =>{
         type: 'success',
         icon: false,
         closeOnClick: true,
-     
       })
 })
 sendMessage.addEventListener('input', ()=>{
