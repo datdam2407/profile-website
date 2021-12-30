@@ -35,6 +35,7 @@ section{
     padding: 0 80px;
     margin: auto;
 }
+
 .about, .services, .skills,.project .teams, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
@@ -80,7 +81,10 @@ section .title::after{
 }
 
 /* navbar styling */
+
+/**/
 .navbar{
+    background-color: rgba(0, 0, 0, 0.863);
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -175,6 +179,7 @@ section .title::after{
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
+
 .home .max-width{
   width: 100%;
   display: flex;
@@ -425,7 +430,7 @@ section .title::after{
 
 /* teams section styling */
 .teams .title::after{
-    content: "who with me";
+    content: "My Social";
 }
 .teams .carousel .card{
     background: #222;
@@ -632,6 +637,7 @@ footer span a:hover{
         display: block;
         z-index: 999;
     }
+    
     .menu-btn i.active:before{
         content: "\f00d";
     }
@@ -653,6 +659,28 @@ footer span a:hover{
         display: block;
     }
     .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .navbar-about .menu-about{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar-about .menu-about.active{
+        left: 0;
+    }
+    .navbar-about .menu-about li{
+        display: block;
+    }
+    .navbar-about .menu-about li a{
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;

@@ -72,6 +72,7 @@ $(document).ready(function(){
     });
 });
 
+
 function sendEmail(params){
     var tempParams = {
         from_name: document.getElementById("fromName").value, 
@@ -80,8 +81,8 @@ function sendEmail(params){
     };
     emailjs.send('gmail_sevenn','template_84ack2x',tempParams)
     .then(function(res){
+        console.log(params)
         console.log("success", res.status)
-        
     })
 
 }
