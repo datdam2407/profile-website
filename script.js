@@ -71,7 +71,9 @@ $(document).ready(function(){
         }
     });
 });
-
+// function btnClicked(){
+//     document.location.href=""
+// }
 
 function sendEmail(params){
     var tempParams = {

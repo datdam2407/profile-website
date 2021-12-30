@@ -265,7 +265,7 @@ section .title::after{
 }
 /*project*/
 .project .title::after{
-    content: "What I work";
+    content: "My social network";
 }
 .project .project-content .left{
     width: 45%;
@@ -430,7 +430,7 @@ section .title::after{
 
 /* teams section styling */
 .teams .title::after{
-    content: "My Social";
+    content: "What I do";
 }
 .teams .carousel .card{
     background: #222;
@@ -777,5 +777,8 @@ footer span a:hover{
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+    .grid-show-details{
+        display: grid;
     }
 }
